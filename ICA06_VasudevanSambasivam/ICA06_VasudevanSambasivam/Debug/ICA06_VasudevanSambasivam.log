@@ -1,5 +1,3 @@
 ﻿  main.cpp
-c:\users\vsambasivam1\documents\github\ica-6-vasusam1\ica06_vasudevansambasivam\ica06_vasudevansambasivam\main.cpp(31): warning C4018: '<': signed/unsigned mismatch
-c:\users\vsambasivam1\documents\github\ica-6-vasusam1\ica06_vasudevansambasivam\ica06_vasudevansambasivam\main.cpp(56): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
-c:\users\vsambasivam1\documents\github\ica-6-vasusam1\ica06_vasudevansambasivam\ica06_vasudevansambasivam\main.cpp(57): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+c:\users\vsambasivam1\documents\github\ica-6-vasusam1\ica06_vasudevansambasivam\ica06_vasudevansambasivam\main.cpp(29): warning C4018: '<': signed/unsigned mismatch
   ICA06_VasudevanSambasivam.vcxproj -> C:\Users\vsambasivam1\Documents\GitHub\ICA-6-vasusam1\ICA06_VasudevanSambasivam\Debug\ICA06_VasudevanSambasivam.exe

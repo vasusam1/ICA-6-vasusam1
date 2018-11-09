@@ -6,20 +6,18 @@
 
 unsigned long long isnumber(char * arrayi);
 void printBits(unsigned long long num, int bit);
-unsigned long long reverse(unsigned long long num);
+void reverse(unsigned long long num, int bit);
 
 int main(int argc, char** argv)
 {
 	unsigned long long num = 0;
-	unsigned long long reverse_num = 0;
 
 	if (argc == 2)
 	{
 		num = isnumber(argv[1]);
 		printBits(num,63);
 		printf("\n");
-		reverse_num = reverse(isnumber(argv[1]));
-		printBits(reverse_num, 63);
+		reverse(num, 63);
 	}
 	getchar();
 	return 0;
@@ -47,14 +45,15 @@ void printBits(unsigned long long num, int bit)
 	printBits(num, bit-1);
 }
 
-unsigned long long reverse(unsigned long long num)
+void reverse(unsigned long long num, int bit)
 {
-	unsigned long long bits = sizeof(num) * 8;
-	unsigned long long reverse_num = 0;
-	for (unsigned long long i = 0; i < bits; i++)
+	unsigned long long mask = 1ULL << 62;
+
+	if (!bit)
+		return;
+	else
 	{
-		if ((num & (1 << i)))
-			reverse_num |= 1 << ((bits - 1) - i);
+		reverse(num << 1, bit - 1);
+		putchar(num & mask ? '1' : '0');
 	}
-	return reverse_num;
 }
