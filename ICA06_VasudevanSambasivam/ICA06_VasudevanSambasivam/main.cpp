@@ -4,9 +4,12 @@
 #include <ctype.h>
 #include <math.h>
 
-unsigned long long isnumber(char * arrayi);
-void printBits(unsigned long long num, int bit);
-void reverse(unsigned long long num, int bit);
+//Methods needed
+unsigned long long isnumber(char * arrayi);//checks if inputted entry is number
+void printBits(unsigned long long num, int bit);//prints bits from MSB to LSB
+void reverse(unsigned long long num, int bit);//prints number in reverse
+unsigned int fib(unsigned int n);//prints number in fibonacci form
+
 
 int main(int argc, char** argv)
 {
@@ -17,7 +20,9 @@ int main(int argc, char** argv)
 		num = isnumber(argv[1]);
 		printBits(num,63);
 		printf("\n");
-		reverse(num, 63);
+		reverse(num, 0);
+		printf("\n");
+		printf("%d ", fib(num));
 	}
 	getchar();
 	return 0;
@@ -32,7 +37,25 @@ unsigned long long isnumber(char * arrayi)
 	return strtoull(arrayi, NULL, 10);
 }
 
+//prints from msb to lsb
 void printBits(unsigned long long num, int bit)
+{
+	unsigned long long mask = 1ULL << bit;//sets mask
+	//if number is a one
+	if (num & mask)
+		printf("1");
+	//if a number is zero
+	if (!(num & mask))
+		printf("0");
+	//if a number is null return;
+	if (!bit)
+		return;
+	//other wise go to the next bit
+	printBits(num, bit-1);
+}
+
+//prints from lsb to msb
+void reverse(unsigned long long num, int bit)
 {
 	unsigned long long mask = 1ULL << bit;
 
@@ -40,20 +63,17 @@ void printBits(unsigned long long num, int bit)
 		printf("1");
 	if (!(num & mask))
 		printf("0");
-	if (!bit)
+	if (bit == 63)
 		return;
-	printBits(num, bit-1);
+	reverse(num, bit + 1);
 }
 
-void reverse(unsigned long long num, int bit)
+//prints the fib number for the number inputted
+unsigned int fib(unsigned int n)
 {
-	unsigned long long mask = 1ULL << 62;
-
-	if (!bit)
-		return;
-	else
-	{
-		reverse(num << 1, bit - 1);
-		putchar(num & mask ? '1' : '0');
-	}
+	if (n == 0)
+		return 0;
+	if(n==1)
+		return 1;
+	return fib(n - 1) + fib(n - 2);
 }
