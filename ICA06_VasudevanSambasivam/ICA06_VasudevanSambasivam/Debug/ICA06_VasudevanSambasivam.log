@@ -1,4 +1,5 @@
 ﻿  main.cpp
-c:\users\vsambasivam1\documents\github\ica-6-vasusam1\ica06_vasudevansambasivam\ica06_vasudevansambasivam\main.cpp(23): warning C4244: 'argument': conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
-c:\users\vsambasivam1\documents\github\ica-6-vasusam1\ica06_vasudevansambasivam\ica06_vasudevansambasivam\main.cpp(32): warning C4018: '<': signed/unsigned mismatch
-  ICA06_VasudevanSambasivam.vcxproj -> C:\Users\vsambasivam1\Documents\GitHub\ICA-6-vasusam1\ICA06_VasudevanSambasivam\Debug\ICA06_VasudevanSambasivam.exe
+c:\users\vssm9\onedrive\documents\visual studio 2017\github\ica-6-vasusam1\ica06_vasudevansambasivam\ica06_vasudevansambasivam\main.cpp(25): warning C4244: 'argument': conversion from 'unsigned __int64' to 'unsigned int', possible loss of data
+c:\users\vssm9\onedrive\documents\visual studio 2017\github\ica-6-vasusam1\ica06_vasudevansambasivam\ica06_vasudevansambasivam\main.cpp(34): warning C4018: '<': signed/unsigned mismatch
+  ICA06_VasudevanSambasivam.vcxproj -> C:\Users\vssm9\OneDrive\Documents\Visual Studio 2017\GitHub\ICA-6-vasusam1\ICA06_VasudevanSambasivam\Debug\ICA06_VasudevanSambasivam.exe
+  ICA06_VasudevanSambasivam.vcxproj -> C:\Users\vssm9\OneDrive\Documents\Visual Studio 2017\GitHub\ICA-6-vasusam1\ICA06_VasudevanSambasivam\Debug\ICA06_VasudevanSambasivam.pdb (Partial PDB)
